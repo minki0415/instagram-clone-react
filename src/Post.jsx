@@ -2,7 +2,7 @@ import React from 'react'
 import classes from './Post.module.css'
 import { Avatar } from '@material-ui/core'
 
-function Post() {
+function Post(props) {
   return (
     <div className={classes.post}>
       <div className={classes.post__header}>        
@@ -11,17 +11,17 @@ function Post() {
           alt='mimamong_ki'
           src="/static/images/avatar/1.jpg"
         />
-        <h3>Username</h3>
+        <h3>{props.username}</h3>
       </div>
         {/* header -> avatar +username */}
 
       <img 
           className={classes.post__image} 
-          src="https://placeimg.com/300/300/animal"
-          alt="" 
+          src={props.imageUrl}
+          alt="Post image" 
       />
 
-        <h4 className={classes.post__text}><strong>mimamong_ki</strong> WoW Amazing!</h4>
+        <h4 className={classes.post__text}><strong>{props.username}</strong>  {props.caption}</h4>
     </div>
   )
 }
