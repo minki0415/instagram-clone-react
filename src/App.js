@@ -2,6 +2,7 @@ import { Modal, makeStyles, Button, Input } from '@material-ui/core';
 import React, { useState, useEffect } from 'react';
 import Post from './Post';
 import classes from './App.module.css'
+import ImageUpload from './ImageUpload';
 
 function getModalStyle() {
   const top = 50;
@@ -10,7 +11,7 @@ function getModalStyle() {
   return {
     top:`${top}%`,
     left: `${left}%`,
-    transform: `translate(-${top}%, -${left}%)`,
+    transform: `translate(-${top}%, -${left}%)`
   };
 }
 
@@ -29,8 +30,11 @@ const useStyles = makeStyles((theme) => ({
 
 function App() {
   const modalClasses = useStyles();
+  const [modalStyle] = useState(getModalStyle);
+
   const [posts, setPosts] = useState([]);
-  const [open, setOpen] = useState('');
+  const [openSignUp, setOpenSignUp] = useState('');
+  const [openSignIn, setOpenSignIn] = useState('');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
@@ -60,19 +64,22 @@ function App() {
     fetchPosts().catch(error => console.log(error));
   }, []);
 
-  const signUp = (event) => {
-
-  }
 
   return (
     <div className={classes.app}>
-      <Modal
-        open={open}
-        onClose={() => setOpen(false)}
-      >
-          <div style={modalClasses.modalStyle} className={modalClasses.paper}>
-            <form>
 
+      {user.displayName ? (
+        <ImageUpload username={user.displayName}/>
+      ) : (
+        <h3>Sorry you need to login to upload</h3>
+      )}
+
+      <Modal
+        open={openSignUp}
+        onClose={() => setOpenSignUp(false)}
+      >
+          <div style={modalStyle} className={modalClasses.paper}>
+            <form className={classes.app__signup}>
               <center>
                 <img
                   className={classes.app__headerImage}
@@ -101,10 +108,43 @@ function App() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
-              <Button onClick={signUp}>Sign Up</Button>
+              <Button onClick={''}>Sign Up</Button>
             </form>
-          </div>
+          </div> 
       </Modal>
+
+      <Modal
+        open={openSignIn}
+        onClose={() => setOpenSignIn(false)}
+      >
+          <div style={modalStyle} className={modalClasses.paper}>
+            <form className={classes.app__signup}>
+              <center>
+                <img
+                  className={classes.app__headerImage}
+                  src='https://www.instagram.com/static/images/web/mobile_nav_type_logo-2x.png/1b47f9d0e595.png'
+                  alt='instagram logo'
+                />
+              </center>
+
+              <Input
+                placeholder="email"
+                type="text"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+
+              <Input
+                placeholder='password'
+                type='password'
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <Button onClick={''}>Sign In</Button>
+            </form>
+          </div> 
+      </Modal>
+      
 
       <div className={classes.app__header}>
         <img
@@ -114,7 +154,8 @@ function App() {
         />
       </div>
 
-      <Button onClick={() => setOpen(true)}>Sign up</Button>
+      <Button onClick={() => setOpenSignUp(true)}>Sign up</Button>
+      <Button onClick={() => setOpenSignIn(true)}>Sign in</Button>
 
       {
         posts.map(post => (
