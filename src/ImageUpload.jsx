@@ -1,7 +1,7 @@
 import { Button } from '@material-ui/core'
 import { dblClick } from '@testing-library/user-event/dist/click';
 import React, { useState } from 'react'
-import { storage, db } from "./firebase;"
+import { storage, db } from "./firebase/app;"
 import classes from './ImageUpload.module.css'
 
 function ImageUpload(props) {
@@ -21,10 +21,10 @@ function ImageUpload(props) {
 
         uploadTask.on(
             "state_changed",
-            (snampshot) => {
+            (snapshot) => {
                 //progress function...
                 const progress = Math.round(
-                    (snampshot.bytesTransgerred / snapshot.totalBytes) * 100
+                    (snapshot.bytesTransgerred / snapshot.totalBytes) * 100
                 );
                 setProgress(progress);
             },
@@ -55,7 +55,7 @@ function ImageUpload(props) {
     };
   return (
     <div className={classes.imageupload}>
-        <progress value={progress} max="100"/>
+        <progress className={classes.imageupload__progress} value={progress} max="100"/>
         <input type="text" placeholder='Enter a caption..' onChange={event => setCaption(event.target.value)} value={caption} />
         <input type="file" onChange={handleChange} />
         <Button onClick={handleUpload}>
