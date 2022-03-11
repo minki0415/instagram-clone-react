@@ -8,12 +8,21 @@
   /* height: 100vh; */
 }
 
+.app__posts {
+  padding: 20px;
+}
 
 .app__header {
   background-color: white;
   padding: 20px;
   border-bottom: 1px solid lightgray;
   object-fit: contain; /* contents의 가로 세로 비 유지*/
+  display: flex;
+  justify-content: space-between;
+}
+
+.app__headerImage {
+  object-fit: contain;
 }
 
 .app__signup {
