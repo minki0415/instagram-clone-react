@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+}
+
+.app {
+  background-color: #fafafa;
+}
+
+.app__posts {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.app__postsRight {
+  margin-left: 20px;
+}
+
+.app__header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: white;
+  padding: 20px;
+  border-bottom: 1px solid lightgray;
+  object-fit: contain;
+  display: flex;
+  justify-content: space-between;
+}
+
+.app__headerImage {
+  object-fit: contain;
+}
+
+.app__signup {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.app__postsRight {
+  height: 300px;
+  width: 300px;
+  margin: 0 0 2rem 2rem;
+}
+.app__postsRight__header {
+  display: flex;
+  align-items: center;
+  margin : 1rem 0;
+}
+.app__postsRight__header h2 {
+  margin: 0 1rem;
+}
+.app__postsRight__body {
+  margin: 1rem 0;
+  border: 1px solid lightgray;
+}
+.app__postsRight__body h4 {
+  margin: 1rem;
+}
+.app__postsRight__header__avatar {
+  margin: 1rem 0;
+}
+.app__postsRight__body__content {
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+}
+.app__postsRight__body__content li {
+  margin: 5px;
+  padding: 2px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.app__postsRight__body__content li h6 {
+  color: blue;
+}
+.app__postsRight__footer {
+  color: lightgray;
+}
+
+
+.app_imageUpload__no {
+  padding-bottom: 20px;
+  align-items: center;
+}
+
+.app_imageUpload__no h3 {
+  text-align: center;
+}
