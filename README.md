@@ -6,6 +6,8 @@
   
 * 프로젝트 소개 : instagram을 react를 통하여 모든 기능을 구현하고자 함
 * 출처: https://www.youtube.com/watch?v=f7T48W0cwXM
+  ![image](https://user-images.githubusercontent.com/93183070/158064604-e9194a75-5179-4f13-a1b2-90ac648dca01.png)
+
 * 프로젝트 기간 : 22/03/17~ 22/03/20
 * 핵심 기능 : 
   1. 데이터베이스에서 게시물 불러오기
