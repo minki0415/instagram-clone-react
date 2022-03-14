@@ -39,6 +39,7 @@
  
 ## 새롭게 배운 내용
   - Firebase 의 다양한 기능 사용 : Authentication, Firestroe, Storage
+  - material-ui 활용하여 기존에 만들어져있는 컴포넌트 불러와서 사용 (Avatar, Modal 등)
   - createUserWithEmailAndPassword : auth에 내장된 회원가입 메서드로 이메일 주소와 비밀번호를 가져와 유효성을 검사한 후 신규 사용자 생성하고자 할때 사용 - Firebase의 서버 데이터와 대조 후 아이디 정보가 없다면 새로 회원가입을 진행
   - onAuthStateChanged : 현재 로그인된 사용자를 불러오는 메서드
   - signInWithEmailAndPassword : email 과 password를 활용해 비동기식으로 로그인 하는 메서드
@@ -49,4 +50,6 @@
 - instagramEmbed 에서 발생한 코드 오류
 
 ## 앞으로의 개선할 사항
-  1. 현재 App.js 파일에 많은 부분이 들어가 있음, 파일로 나눠서 작성 필요
+  1. 현재 App.js 파일에 많은 부분이 들어가 있음, 파일로 나눠서 작성
+  2. material-ui를 활용하여 만들었던 컴포넌트들을 직접 코딩하여 구현하기
+  3. App.js에 들어있는 스타일 관련 코드 구분하여 작성하기 
