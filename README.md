@@ -10,7 +10,7 @@
 * 출처: https://www.youtube.com/watch?v=f7T48W0cwXM
   ![image](https://user-images.githubusercontent.com/93183070/158064604-e9194a75-5179-4f13-a1b2-90ac648dca01.png)
 
-* 프로젝트 기간 : 22/03/17~ 22/03/20
+* 프로젝트 기간 : 22/03/10~ 22/03/13
 * 핵심 기능 : 
   1. 게시물 보여주기 - Firebase 데이터베이스에서 게시물 불러오기
   2. 회원가입/로그인 - Firebase Authentication를 활용, 회원가입, 로그인 기능 구축<br>
