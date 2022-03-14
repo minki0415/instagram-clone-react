@@ -10,10 +10,11 @@
 
 * 프로젝트 기간 : 22/03/17~ 22/03/20
 * 핵심 기능 : 
-  1. 데이터베이스에서 게시물 불러오기
-  2. 회원가입/로그인 - Firebase Database를 활용, 데이터베이스상의 정보와 연결하여 구축
-  3. 댓글달기 - 포스팅의 댓글에서 post 버튼 클릭시 댓글을 달 수 있도록 함
-  4. 게시물 업로드 - 올리고자 하는 이미지 선택, 텍스트 입력 후 upload 버튼 클릭하여 게시물 업로드
+  1. 게시물 보여주기 - Firebase 데이터베이스에서 게시물 불러오기
+  2. 회원가입/로그인 - Firebase Authentication를 활용, 회원가입, 로그인 기능 구축<br>
+     &nbsp; (비로그인 시 - 게시물 사진 확인만 가능, 댓글 달기, 게시물 업로드 등의 기능 활용 x)
+  4. 댓글달기 - 게시물의 댓글 부분에서 댓글을 입력하고 '입력' 버튼 클릭시 댓글을 달 수 있도록 함
+  5. 게시물 업로드 - 올리고자 하는 이미지 선택, 텍스트 입력 후 upload 버튼 클릭하여 게시물 업로드
 
 * 실행화면 🖥
 
@@ -35,7 +36,7 @@
  
  
 ## 새롭게 배운 내용
-  - Firebase Database 활용
+  - Firebase 의 다양한 기능 사용 : Authentication, Firestroe, Storage
   - createUserWithEmailAndPassword : auth에 내장된 회원가입 메서드로 이메일 주소와 비밀번호를 가져와 유효성을 검사한 후 신규 사용자 생성하고자 할때 사용 - Firebase의 서버 데이터와 대조 후 아이디 정보가 없다면 새로 회원가입을 진행
   - onAuthStateChanged : 현재 로그인된 사용자를 불러오는 메서드
   - signInWithEmailAndPassword : email 과 password를 활용해 비동기식으로 로그인 하는 메서드
