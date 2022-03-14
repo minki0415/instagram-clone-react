@@ -18,7 +18,7 @@ const ImageUpload = ({username}) => {
     };
 
     const handleUpload = () => {
-        const storageRef = ref(storage, `images/${image.name}`);
+        const storageRef = ref(storage, `images/${username}-${Date.now()}-${image.name}`);
         const uploadTask = uploadBytesResumable(storageRef, image);
         // console.log(image.name);
 
