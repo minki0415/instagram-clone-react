@@ -1,8 +1,10 @@
 # Instagram-clone-react
 * 팀원 구성 : 
-  - 김민기
-  - 장우재
-  - 이승현
+  - 김민기 (메인화면 react로 구현)
+  - 장우재 (Firebase Auth, Storage 구현)
+  - 이승현 (Firebase 호스팅, Database 구현)
+
+* 깃허브를 활용하여 코드 공유 및 프로젝트 진행
   
 * 프로젝트 소개 : instagram을 react를 통하여 모든 기능을 구현하고자 함
 * 출처: https://www.youtube.com/watch?v=f7T48W0cwXM
