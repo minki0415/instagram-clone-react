@@ -47,7 +47,6 @@
 
 ## Error revising
 - Firebase Database 사용시 Realtime Database가 아닌 Firestore Database를 활용하여 instagram의 sign in, sign up, post등을 구현하고자 하였으나 오류가 발생, 해당 오류가 버전차이임을 확인하고 수정 후 오류 해결
-- instagramEmbed 에서 발생한 코드 오류
 
 ## 앞으로의 개선할 사항
   1. 현재 App.js 파일에 많은 부분이 들어가 있음, 파일로 나눠서 작성
